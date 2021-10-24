@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="heading">IIITDM Jabalpur Sports Manager</div>
+    <div class="forming" align="center">
+
+ <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "sports";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT category_id,category_name,sport_name,gender,team_size FROM category";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "category ID: " . $row["category_id"]. "<br>"."category Name: " . $row["category_name"]. "<br>"."sport name: " . $row["sport_name"]. "<br>"."Gender: " . $row["gender"]. "<br>"."Team Size: " . $row["team_size"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();
+?>
+    </div>
+</html>
