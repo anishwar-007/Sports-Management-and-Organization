@@ -96,7 +96,7 @@ class="close" title="Close Modal">&times;</span>
 class="close" title="Close Modal">&times;</span>
 
   <!-- Modal Content -->
-  <form class="modal-content animate" action="">  <!-- Here will be the target to the next page -->
+  <form class="modal-content animate" action = "admin/admin-login.php" onsubmit = "return validation()" method = "POST">  <!-- Here will be the target to the next page -->
     <div class="imgcontainer">
       <img src="admin-image.png" alt="Avatar" class="avatar">
     </div>
