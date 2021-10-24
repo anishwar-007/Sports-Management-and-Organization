@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: azure;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+.heading {
+  margin: 10px auto;
+  width: 800px;
+  height: 80px;
+  background-color: black;
+  color: wheat;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 12px;
+  border-radius: 30px;
+}
+
+.forming {
+  background-image: url("https://media.istockphoto.com/photos/various-sports-equipment-balls-on-wooden-background-picture-id1145660545");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+}
+
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 30px;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+  float: left;
+  width: 50%;
+  border-radius: 30px;
+}
+
